@@ -10,7 +10,7 @@ This module allows to import, export and convert INI files (and strings) to hash
   * Supports any available .Net encoding for reading and writing files (unlike Windows' native functions and their PInvoke wrappers that have [very limited Unicode support](http://www.siao2.com/2006/09/15/754992.aspx).)
   * Full comment-based help and usage examples.
 
-# Usage examples
+# Usage
 
 ## Import
 
