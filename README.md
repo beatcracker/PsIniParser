@@ -2,7 +2,7 @@
 
 This module allows to import, export and convert INI files (and strings) to hashtables (or objects) and vice versa. You can specify various parsing options (INI files are not standardized), or use specific encoding while reading a file.
 
-## Features
+# Features
 
   * Provided cmdlets mimic native PowerShell ones (`Import-*`, `Export-*`, `ConvertTo-*`, `ConvertFrom-*`).
   * Uses actively supported [INI File Parser](https://github.com/rickyah/ini-parser) by Ricardo Amores Hernández.
@@ -10,9 +10,9 @@ This module allows to import, export and convert INI files (and strings) to hash
   * Supports any available .Net encoding for reading and writing files (unlike Windows' native functions and their PInvoke wrappers that have [very limited Unicode support](http://www.siao2.com/2006/09/15/754992.aspx).)
   * Full comment-based help and usage examples.
 
-## Usage examples
+# Usage examples
 
-### Import
+## Import
 
 * Single file
 
@@ -43,7 +43,7 @@ Key@Value
 'Weird.ini' | Import-Ini -CommentStrings '%' -SectionStartChar '{' -SectionEndChar '}' -KeyValueAssigmentChar '@'
 ```  
 
-### Convert from
+## Convert from
 
 * INI string
 
@@ -63,7 +63,7 @@ Key@Value
 "{Section}`nKey@Value`n%Comment" | ConvertFrom-Ini -CommentStrings '%' -SectionStartChar '{' -SectionEndChar '}' -KeyValueAssigmentChar '@'
 ```
 
-### Export
+## Export
 
 * Hashtable to INI file
 
@@ -83,7 +83,7 @@ Key@Value
 @{Section = @{Key = 'Value'}} | Export-Ini -Path '.\My.ini' -SectionStartChar '{' -SectionEndChar '}' -KeyValueAssigmentChar '@'
 ```
 
-### Convert to
+## Convert to
 
 * Hashtable to INI string
 
@@ -104,7 +104,7 @@ Key@Value
 @{Section = @{Key = 'Value'}} | ConvertTo-Ini -SectionStartChar '{' -SectionEndChar '}' -KeyValueAssigmentChar '@'
 ```
 
-# Usage
+# Installation
 
 Download\clone this repository and it to your PowerShell modules folder. If you downloaded repository as ZIP file, you need to unblock it first:
 
